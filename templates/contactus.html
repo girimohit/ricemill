@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Rahul Ruby Rice Mill</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f4f7f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #fff;
+      padding: 20px 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #007bff;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1572188869930-3c4ec8b3f84f') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      font-weight: 300;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      max-width: 800px;
+      background: #fff;
+      margin: 50px auto;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    button {
+      padding: 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Map */
+    .map-section {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      max-width: 1000px;
+      height: 400px;
+      border-radius: 10px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      color: #555;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <h2 style="margin: 0;">Rahul Ruby Rice Mill</h2>
+      <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'product' %}">Product</a>
+        <a href="{% url 'aboutus' %}">About Us</a>
+        <a href="{% url 'contactus' %}" style="color: #007bff;">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you. Send us a message anytime!</p>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-section">
+    <form action="#" method="POST">
+      <div>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <h2>Our Location</h2>
+    <p>Visit our rice mill or find us on the map below.</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14743.16566028285!2d78.46539675!3d17.38504485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976e8cd56b29%3A0x52705c6528aef5f3!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1629379316140!5m2!1sen!2sin"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Rahul Ruby Rice Mill. All rights reserved.
+  </footer>
+
+</body>
+</html>

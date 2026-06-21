@@ -1,0 +1,54 @@
+# ==========================================
+# Django Core & Database
+# ==========================================
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# ==========================================
+# Python Byte-compiled / Cache files
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ==========================================
+# Virtual Environments (Dependencies)
+# ==========================================
+.venv/
+venv/
+ENV/
+env/
+target/
+.python-version
+
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+.env
+.venv
+
+.env.[a-zA-Z]*
+!.env.example
+
+# ==========================================
+# Django Media and Static Assets
+# ==========================================
+# Media files (User uploads should not be in version control)
+media/
+staticfiles/
+static_cdn/
+
+# ==========================================
+# OS and IDE Configurations
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
